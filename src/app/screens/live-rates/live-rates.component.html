@@ -1,0 +1,187 @@
+<div class="d-flex flex-column w-100" style="height: 100vh">
+  <div class="top-bar">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <H2
+        style="height: 6rem"
+        class="d-flex flex-column justify-content-center align-items-center"
+        >DEMO LIVE RATES
+        <p style="font-size: 1rem; margin: 0">
+          Made with ♥️ in india by Shubh Soni
+        </p></H2
+      >
+
+      <!-- <img
+        style="height: 8rem"
+        src="https://media.discordapp.net/attachments/1157563323844403220/1157563406476398672/Untitled.png?ex=6519106e&amp;is=6517beee&amp;hm=432ef3f84a307f176b36da6365290ba6e80cba341f53748ccf33eb85a94c0c03&amp;=&amp;width=1042&amp;height=1042"
+      /> -->
+    </div>
+  </div>
+  <div class="d-flex flex-row justify-content-center align-item-center">
+    {{ formattedDate }} {{ currentDay }}
+  </div>
+  <div
+    *ngIf="rate.data.master_visible && rate.data.status == 'active'"
+    class="d-flex flex-row gap-1 justify-content-center align-item-center"
+    style="background-color: black; text-align: center"
+  >
+    <marquee style="margin: 0; color: white" id="note">
+      {{ rate.data.top_info }}
+    </marquee>
+  </div>
+  <div
+    style="background-color: black; height: 100%; display: block"
+    id="main"
+    *ngIf="
+      rate.data.master_visible && rate.data && rate.data.status == 'active'
+    "
+  >
+    <div
+      class="d-flex flex-column justify-content-center align-item-center p-4"
+    >
+      <div
+        class="d-flex justify-content-center align-item-center"
+        *ngIf="rate.data.gold_24_bool"
+      >
+        <div
+          style="border: 2px #c7a63d solid; width: 95%"
+          class="d-flex flex-row justify-content-center align-item-center"
+        >
+          <h5 style="margin: 0" id="goldPrice" class="p-3 text-white">
+            GOLD 24 CARAT: {{ rate.data.gold_24 | number : "1.0-0" }}
+          </h5>
+        </div>
+      </div>
+      <div
+        class="d-flex justify-content-center align-item-center pt-4"
+        *ngIf="rate.data.gold_22_bool"
+      >
+        <div
+          style="border: 2px #c7a63d solid; width: 95%"
+          class="d-flex flex-row justify-content-center align-item-center"
+        >
+          <h5 style="margin: 0" id="twentyTwoCaratPrice" class="p-3 text-white">
+            GOLD 22 CARAT: {{ rate.data.gold_22 | number : "1.0-0" }}
+          </h5>
+        </div>
+      </div>
+
+      <div
+        class="d-flex justify-content-center align-item-center pt-4"
+        *ngIf="rate.data.gold_20_bool"
+      >
+        <div
+          style="border: 2px #c7a63d solid; width: 95%"
+          class="d-flex flex-row justify-content-center align-item-center"
+        >
+          <h5 style="margin: 0" id="twentyCaratPrice" class="p-3 text-white">
+            GOLD 20 CARAT: {{ rate.data.gold_20 | number : "1.0-0" }}
+          </h5>
+        </div>
+      </div>
+      <div
+        class="d-flex justify-content-center align-item-center pt-4"
+        *ngIf="rate.data.gold_18_bool"
+      >
+        <div
+          style="border: 2px #c7a63d solid; width: 95%"
+          class="d-flex flex-row justify-content-center align-item-center"
+        >
+          <h5 style="margin: 0" id="eighteenCaratPrice" class="p-3 text-white">
+            GOLD 18 CARAT: {{ rate.data.gold_18 | number : "1.0-0" }}
+          </h5>
+        </div>
+      </div>
+      <div
+        class="d-flex justify-content-center align-item-center pt-4"
+        *ngIf="rate.data.gold_14_bool"
+      >
+        <div
+          style="border: 2px #c7a63d solid; width: 95%"
+          class="d-flex flex-row justify-content-center align-item-center"
+        >
+          <h5 style="margin: 0" id="eighteenCaratPrice" class="p-3 text-white">
+            GOLD 14 CARAT: {{ rate.data.gold_14 | number : "1.0-0" }}
+          </h5>
+        </div>
+      </div>
+      <div
+        class="d-flex justify-content-center align-item-center pt-4"
+        *ngIf="rate.data.silver_bool"
+      >
+        <div
+          style="border: 2px #c7a63d solid; width: 95%"
+          class="d-flex flex-row justify-content-center align-item-center"
+        >
+          <h5 style="margin: 0" id="silverValue" class="p-3 text-white">
+            SILVER: {{ rate.data.silver | number : "1.0-0" }}
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    style="background-color: black; height: 100%; display: block"
+    *ngIf="loader"
+    class="d-flex justify-content-center align-item-center"
+  >
+    <div
+      class="d-flex flex-column justify-content-center align-item-center"
+      *ngIf="loader"
+    >
+      <div
+        class="spinner-grow text-light d-flex flex-column justify-content-center align-item-center"
+        role="status"
+      >
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="rate.data.master_visible && rate.data.status == 'active'"
+    class="d-flex flex-row gap-1 justify-content-center align-item-center"
+    style="background-color: black; text-align: center"
+  >
+    <marquee style="margin: 0; color: white" id="note">
+      {{ rate.data.bottom_info }}
+    </marquee>
+  </div>
+  <div
+    *ngIf="rate.data.master_visible == false"
+    class="d-flex flex-row h-100 gap-1 justify-content-center align-items-center"
+    style="background-color: black; text-align: center"
+  >
+    <h2 style="margin: 0; color: white" id="note">LIVES RATES ARE OFF TODAY</h2>
+  </div>
+  <div
+    *ngIf="rate.data.status == 'inactive'"
+    class="d-flex flex-row h-100 gap-1 justify-content-center align-items-center"
+    style="background-color: black; text-align: center"
+  >
+    <h2 style="margin: 0; color: white" id="note">
+      SUBSCRIPTION EXPIRED CONTACT PROVIDER
+    </h2>
+  </div>
+  <div style="background-color: #c7a63d" class="py-2">
+    <div
+      class="d-flex flex-row justify-content-center align-item-center"
+      style="font-size: 0.8rem; font-weight: 600; text-align: center"
+    >
+      <!-- GUPTA COMPLEX, BADI BAZARIYA, BINA - 470113 (MP), BHARAT -->
+      Address field
+    </div>
+    <div
+      class="d-flex flex-row justify-content-center align-item-center"
+      style="font-size: 1rem; font-weight: 600"
+    >
+      CONTACT US - XXXXXXXXXX
+    </div>
+    <div
+      *ngIf="visitor.data.visitor"
+      class="d-flex flex-row justify-content-center align-item-center"
+      style="font-size: 0.8rem; font-weight: 600"
+    >
+      Visitors - {{ visitor.data.visitor }}
+    </div>
+  </div>
+</div>
