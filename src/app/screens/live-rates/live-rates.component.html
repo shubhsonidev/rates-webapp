@@ -1,4 +1,19 @@
-<!-- <div class="d-flex flex-column w-100" style="height: 100vh">
+<div
+  style="background-color: black; height: 100vh; display: block"
+  *ngIf="loader"
+  class="d-flex justify-content-center align-item-center"
+>
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <div class="loader-main"></div>
+    <div class="text-white">Loading...</div>
+  </div>
+</div>
+
+<div
+  class="d-flex flex-column w-100"
+  style="height: 100vh"
+  *ngIf="rate.data.active_design === 'design_1'"
+>
   <div class="top-bar">
     <div class="d-flex flex-column justify-content-center align-items-center">
       <H2
@@ -178,9 +193,13 @@
       Visitors - {{ visitor.data.visitor }}
     </div>
   </div>
-</div> -->
+</div>
 
-<div class="d-flex flex-column w-100" style="height: 100vh">
+<div
+  class="d-flex flex-column w-100"
+  style="height: 100vh"
+  *ngIf="rate.data.active_design === 'design_2'"
+>
   <div style="background-color: #283618">
     <div class="d-flex flex-row justify-content-center mx-4 align-items-center">
       <H2
@@ -391,6 +410,364 @@
     </h2>
   </div>
   <div style="background-color: #283618" class="py-2 text-white">
+    <div
+      class="d-flex flex-row justify-content-center align-item-center"
+      style="font-size: 0.8rem; font-weight: 600; text-align: center"
+    >
+      Address field
+    </div>
+    <div
+      class="d-flex flex-row justify-content-center align-item-center"
+      style="font-size: 1rem; font-weight: 600"
+    >
+      CONTACT US - XXXXXXXXXX
+    </div>
+    <div
+      *ngIf="visitor.data.visitor"
+      class="d-flex flex-row justify-content-center align-item-center"
+      style="font-size: 0.8rem; font-weight: 600"
+    >
+      Visitors - {{ visitor.data.visitor }}
+    </div>
+  </div>
+</div>
+
+<div
+  class="d-flex flex-column w-100"
+  style="height: 100vh"
+  *ngIf="rate.data.active_design === 'design_3'"
+>
+  <div style="background-color: #d89a2b; border-bottom: 3px solid black">
+    <div class="d-flex flex-row justify-content-center mx-4 align-items-center">
+      <H2
+        style="height: 6rem"
+        class="d-flex flex-column justify-content-center align-items-center"
+        >DEMO LIVE RATES
+        <p style="font-size: 1rem; margin: 0">
+          Made with ♥️ in india by Shubh Soni
+        </p></H2
+      >
+    </div>
+  </div>
+  <!-- <div
+    class="d-flex flex-row justify-content-center align-item-center"
+    style="background-color: #83c5be"
+  >
+    {{ formattedDate }} {{ currentDay }}
+  </div> -->
+
+  <div
+    *ngIf="rate.data.master_visible && rate.data.status == 'active'"
+    class="d-flex flex-row gap-1 justify-content-center align-item-center"
+    style="background-color: white; text-align: center"
+  >
+    <marquee style="margin: 0; color: black" id="note">
+      {{ rate.data.top_info }}
+    </marquee>
+  </div>
+  <div
+    style="background-color: white; height: 100%; display: block"
+    id="main"
+    *ngIf="
+      rate.data.master_visible && rate.data && rate.data.status == 'active'
+    "
+  >
+    <div class="d-flex justify-content-center align-items-center">
+      <div
+        style="
+          color: #c7a63d;
+          border: 1.5px solid #c7a63d;
+          border-radius: 5px;
+          width: 95%;
+          border-radius: 6px;
+          position: relative;
+        "
+        class="m-4 d-flex justify-content-center align-items-center"
+      >
+        <div
+          style="
+            color: #c7a63d;
+            border: 1.5px solid #c7a63d;
+            width: 6rem;
+            border-radius: 5px;
+            padding: 3px;
+            background-color: white;
+            position: absolute;
+            top: -17px;
+            font-weight: 700;
+          "
+          class="d-flex justify-content-center align-items-center"
+        >
+          GOLD
+        </div>
+        <div
+          class="d-flex flex-row flex-wrap gap-2 justify-content-center align-item-center px-0 py-4"
+        >
+          <div class="d-flex justify-content-center align-items-center">
+            <div
+              style="
+                background-color: #011d28;
+                width: 40vw;
+                border-radius: 12px;
+                padding: 7px;
+              "
+              class="d-flex justify-content-center align-item-center"
+              *ngIf="rate.data.gold_24_bool"
+            >
+              <div
+                style="
+                  border: 2px #c7a63d solid;
+                  width: 100%;
+                  border-radius: 5px;
+                "
+                class="d-flex flex-row justify-content-center align-item-center"
+              >
+                <h5
+                  style="margin: 0"
+                  id="goldPrice"
+                  class="p-3 text-white gap-2 d-flex flex-column justify-content-center align-items-center"
+                >
+                  <span style="font-size: 13px">24 CARAT:</span>
+                  {{ rate.data.gold_24 | number : "1.0-0" }}/-
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <div
+              style="
+                background-color: #011d28;
+                width: 40vw;
+                border-radius: 12px;
+                padding: 7px;
+              "
+              class="d-flex justify-content-center align-item-center"
+              *ngIf="rate.data.gold_22_bool"
+            >
+              <div
+                style="
+                  border: 2px #c7a63d solid;
+                  width: 100%;
+                  border-radius: 5px;
+                "
+                class="d-flex flex-row justify-content-center align-item-center"
+              >
+                <h5
+                  style="margin: 0"
+                  id="goldPrice"
+                  class="p-3 text-white gap-2 d-flex flex-column justify-content-center align-items-center"
+                >
+                  <span style="font-size: 13px">22 CARAT:</span>
+                  {{ rate.data.gold_22 | number : "1.0-0" }}/-
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <div
+              style="
+                background-color: #011d28;
+                width: 40vw;
+                border-radius: 12px;
+                padding: 7px;
+              "
+              class="d-flex justify-content-center align-item-center"
+              *ngIf="rate.data.gold_20_bool"
+            >
+              <div
+                style="
+                  border: 2px #c7a63d solid;
+                  width: 100%;
+                  border-radius: 5px;
+                "
+                class="d-flex flex-row justify-content-center align-item-center"
+              >
+                <h5
+                  style="margin: 0"
+                  id="goldPrice"
+                  class="p-3 text-white gap-2 d-flex flex-column justify-content-center align-items-center"
+                >
+                  <span style="font-size: 13px">20 CARAT:</span>
+                  {{ rate.data.gold_20 | number : "1.0-0" }}/-
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <div
+              style="
+                background-color: #011d28;
+                width: 40vw;
+                border-radius: 12px;
+                padding: 7px;
+              "
+              class="d-flex justify-content-center align-item-center"
+              *ngIf="rate.data.gold_18_bool"
+            >
+              <div
+                style="
+                  border: 2px #c7a63d solid;
+                  width: 100%;
+                  border-radius: 5px;
+                "
+                class="d-flex flex-row justify-content-center align-item-center"
+              >
+                <h5
+                  style="margin: 0"
+                  id="goldPrice"
+                  class="p-3 text-white gap-2 d-flex flex-column justify-content-center align-items-center"
+                >
+                  <span style="font-size: 13px">18 CARAT:</span>
+                  {{ rate.data.gold_18 | number : "1.0-0" }}/-
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <div
+              style="
+                background-color: #011d28;
+                width: 40vw;
+                border-radius: 12px;
+                padding: 7px;
+              "
+              class="d-flex justify-content-center align-item-center"
+              *ngIf="rate.data.gold_14_bool"
+            >
+              <div
+                style="
+                  border: 2px #c7a63d solid;
+                  width: 100%;
+                  border-radius: 5px;
+                "
+                class="d-flex flex-row justify-content-center align-item-center"
+              >
+                <h5
+                  style="margin: 0"
+                  id="goldPrice"
+                  class="p-3 text-white gap-2 d-flex flex-column justify-content-center align-items-center"
+                >
+                  <span style="font-size: 13px">14 CARAT:</span>
+                  {{ rate.data.gold_14 | number : "1.0-0" }}/-
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="d-flex justify-content-center align-items-center"
+      *ngIf="rate.data.silver_bool"
+    >
+      <div
+        style="
+          color: #c7a63d;
+          border: 1.5px solid #c7a63d;
+          border-radius: 5px;
+          width: 95%;
+          border-radius: 6px;
+          position: relative;
+        "
+        class="m-4 d-flex justify-content-center align-items-center"
+      >
+        <div
+          style="
+            color: #c7a63d;
+            border: 1.5px solid #c7a63d;
+            width: 6rem;
+            border-radius: 5px;
+            padding: 3px;
+            background-color: white;
+            position: absolute;
+            top: -17px;
+            font-weight: 700;
+          "
+          class="d-flex justify-content-center align-items-center"
+        >
+          SILVER
+        </div>
+        <div
+          class="d-flex flex-row flex-wrap gap-2 justify-content-center align-item-center px-0 py-4"
+        >
+          <div class="d-flex justify-content-center align-items-center">
+            <div
+              style="
+                background-color: #011d28;
+                width: 80vw;
+                border-radius: 12px;
+                padding: 7px;
+              "
+              class="d-flex justify-content-center align-item-center"
+              *ngIf="rate.data.silver_bool"
+            >
+              <div
+                style="
+                  border: 2px #c7a63d solid;
+                  width: 100%;
+                  border-radius: 5px;
+                "
+                class="d-flex flex-row justify-content-center align-item-center"
+              >
+                <h5
+                  style="margin: 0"
+                  id="goldPrice"
+                  class="p-3 text-white gap-2 d-flex flex-column justify-content-center align-items-center"
+                >
+                  <span style="font-size: 13px">SILVER:</span>
+                  {{ rate.data.silver | number : "1.0-0" }}/-
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    style="background-color: white; height: 100%; display: block"
+    *ngIf="loader"
+    class="d-flex justify-content-center align-item-center"
+  >
+    <div
+      class="d-flex flex-column justify-content-center align-item-center"
+      *ngIf="loader"
+    >
+      <div
+        class="spinner-grow text-black d-flex flex-column justify-content-center align-item-center"
+        role="status"
+      >
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="rate.data.master_visible && rate.data.status == 'active'"
+    class="d-flex flex-row gap-1 justify-content-center align-item-center"
+    style="background-color: white; text-align: center"
+  >
+    <marquee style="margin: 0; color: black" id="note">
+      {{ rate.data.bottom_info }}
+    </marquee>
+  </div>
+  <div
+    *ngIf="rate.data.master_visible == false"
+    class="d-flex flex-row h-100 gap-1 justify-content-center align-items-center"
+    style="background-color: black; text-align: center"
+  >
+    <h2 style="margin: 0; color: white" id="note">LIVES RATES ARE OFF TODAY</h2>
+  </div>
+  <div
+    *ngIf="rate.data.status == 'inactive'"
+    class="d-flex flex-row h-100 gap-1 justify-content-center align-items-center"
+    style="background-color: black; text-align: center"
+  >
+    <h2 style="margin: 0; color: white" id="note">
+      SUBSCRIPTION EXPIRED CONTACT PROVIDER
+    </h2>
+  </div>
+  <div style="background-color: #d89a2b" class="py-2">
     <div
       class="d-flex flex-row justify-content-center align-item-center"
       style="font-size: 0.8rem; font-weight: 600; text-align: center"
