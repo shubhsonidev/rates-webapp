@@ -97,5 +97,6 @@ export interface rateResponse {
     silver_bool: boolean;
     bottom_info: string;
     top_info: string;
+    active_design: string;
   };
 }
