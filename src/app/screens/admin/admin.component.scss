@@ -1,11 +1,70 @@
 .whatsapp-contact-us {
   background-color: #6ce0986b;
   width: 10rem;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .border-cont {
   border: 1px solid rgba(0, 0, 0, 0.278);
   border-radius: 10px;
   padding: 1rem;
+}
+
+.colo-cont {
+  color: white;
+  background-color: #262b4a;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.mid-cont {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.bottom-bar {
+  position: absolute;
+  width: 95vw;
+  bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader-main {
+  width: 80px;
+  aspect-ratio: 1;
+  border: 10px solid #0000;
+  box-sizing: border-box;
+  background: radial-gradient(farthest-side, #fff 98%, #0000) 0 0/20px 20px,
+    radial-gradient(farthest-side, #fff 98%, #0000) 100% 0/20px 20px,
+    radial-gradient(farthest-side, #fff 98%, #0000) 100% 100%/20px 20px,
+    radial-gradient(farthest-side, #fff 98%, #0000) 0 100%/20px 20px,
+    linear-gradient(#fff 0 0) 50%/40px 40px, #000;
+  background-repeat: no-repeat;
+  filter: blur(4px) contrast(10);
+  animation: l12 0.8s infinite;
+}
+@keyframes l12 {
+  100% {
+    background-position: 100% 0, 100% 100%, 0 100%, 0 0, center;
+  }
+}
+
+.dark-modal .modal-content {
+  background-color: #292b2c;
+  color: white;
+}
+.dark-modal .close {
+  color: white;
+}
+.light-blue-backdrop {
+  background-color: #5cb3fd;
+}
+svg {
+  cursor: pointer;
 }
