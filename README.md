@@ -1,27 +1,91 @@
-# RatesWebapp
+# RATES-WEBAPP
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+RATES-WEBAPP provides live rates for physical Gold and Silver. Designed as a SaaS solution for jewelry retailers.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Live Rates:** Get live rates for gold and silver easily.
+- **Responsive Design:** Optimized for both desktop and mobile devices.
+- **Admin Panel:** Quick control of the webapp with an intuitive admin panel.
 
-## Code scaffolding
+![Live Rates Screenshot](https://raw.githubusercontent.com/shubhsonidev/linkerly/master/img00002.jpeg)
+![Admin Panel Screenshot](https://raw.githubusercontent.com/shubhsonidev/linkerly/master/img00001.jpeg)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Live Demo
 
-## Build
+Check out the live demo of RATES-WEBAPP here: <a href="https://metalrates.netlify.app/" target="_blank">RATES-WEBAPP Live</a>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Tech Stack
 
-## Running unit tests
+- **Angular**
+- **Bootstrap**
+- **App Script**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Getting Started
 
-## Running end-to-end tests
+### Prerequisites
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Node.js and npm installed on your machine.
+- Angular CLI 16.0.0 installed globally via npm.
 
-## Further help
+### Installation
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. **Clone the repository:**
+
+    ```bash
+    git clone [repository-url]
+    ```
+
+2. **Navigate to the project directory:**
+
+    ```bash
+    cd RATES-WEBAPP
+    ```
+
+3. **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+### Running the Application
+
+1. **Start the development server:**
+
+    ```bash
+    ng serve
+    ```
+
+2. **Open your browser and navigate to:**
+
+    ```bash
+    http://localhost:4200/
+    ```
+
+## Deployment
+
+RATES-WEBAPP is hosted on Netlify. To deploy your own version:
+
+1. **Create a Netlify account if you don't have one.**
+2. **Connect your GitHub repository to Netlify.**
+3. **Follow the deployment instructions provided by Netlify.**
+
+## Contributing
+
+1. **Fork the repository.**
+2. **Create a new branch for your feature or bugfix.**
+3. **Commit your changes and push your branch to GitHub.**
+4. **Submit a pull request for review.**
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- **Inspired by the lack of physical gold rate information in lower-tier cities.**
+- **Built with the power of Angular, Bootstrap, and App Script.**
+
+## Contact
+
+For any questions or feedback, please contact **[shubhsoni.dev@gmail.com](mailto:shubhsoni.dev@gmail.com)**
