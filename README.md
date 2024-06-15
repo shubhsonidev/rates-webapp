@@ -8,8 +8,8 @@ RATES-WEBAPP provides live rates for physical Gold and Silver. Designed as a Saa
 - **Responsive Design:** Optimized for both desktop and mobile devices.
 - **Admin Panel:** Quick control of the webapp with an intuitive admin panel.
 
-![Live Rates Screenshot](https://raw.githubusercontent.com/shubhsonidev/linkerly/master/img00002.jpeg)
-![Admin Panel Screenshot](https://raw.githubusercontent.com/shubhsonidev/linkerly/master/img00001.jpeg)
+![Live Rates Screenshot](https://raw.githubusercontent.com/shubhsonidev/rated-webapp/main/img00002.png)
+![Admin Panel Screenshot](https://raw.githubusercontent.com/shubhsonidev/rated-webapp/main/img00001.png)
 
 ## Live Demo
 
