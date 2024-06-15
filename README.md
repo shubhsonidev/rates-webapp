@@ -33,7 +33,7 @@ Check out the live demo of RATES-WEBAPP here: <a href="https://metalrates.netlif
 1. **Clone the repository:**
 
     ```bash
-    git clone [repository-url]
+    git clone https://github.com/shubhsonidev/rates-webapp.git
     ```
 
 2. **Navigate to the project directory:**
