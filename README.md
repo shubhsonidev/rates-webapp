@@ -89,3 +89,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 For any questions or feedback, please contact **[shubhsoni.dev@gmail.com](mailto:shubhsoni.dev@gmail.com)**
+or can connect with me on **[Linkedin](https://www.linkedin.com/in/shubh-soni-7b8590225/)**
