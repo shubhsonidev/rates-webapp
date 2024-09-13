@@ -77,10 +77,6 @@ RATES-WEBAPP is hosted on Netlify. To deploy your own version:
 3. **Commit your changes and push your branch to GitHub.**
 4. **Submit a pull request for review.**
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgements
 
 - **Inspired by the lack of physical gold rate information in lower-tier cities.**
